@@ -9,5 +9,21 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserDao {
-    public User getUser(@Param("username") String username, @Param("password") String password);
+    User getUser(@Param("username") String username, @Param("password") String password);
+
+    /**
+     * 注册
+     *
+     * @param user
+     * @return
+     */
+    int register(User user);
+
+    /**
+     * 根据昵称查找用户
+     *
+     * @param nickname
+     * @return
+     */
+    User queryByNickName(@Param("nickname") String nickname);
 }

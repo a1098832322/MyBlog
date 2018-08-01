@@ -3,7 +3,6 @@
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="archive" name="MyBlog.war">
       <element id="artifact" artifact-name="MyBlog:war exploded" />
-      <element id="dir-copy" path="$PROJECT_DIR$/target/MyBlog" />
     </root>
   </artifact>
 </component>

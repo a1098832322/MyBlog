@@ -68,46 +68,6 @@ public class ArticleController {
         return "views/detail";
     }
 
-    @RequestMapping("/manager")
-    public String admin(Model model) {
-        User user = userService.getCurrentUser();
-        model.addAttribute("user", user);
-        model.addAttribute("articles", articleService.getArticles(user));
-        return "admin/index";
-    }
-
-    @RequestMapping("/manager/login")
-    public String login() {
-        return "admin/login";
-    }
-
-    @RequestMapping(value = "/manager/dologin", method = RequestMethod.POST)
-    public String doLogin(HttpServletRequest request, User user, Model model) {
-        System.out.println("user.getUsername():" + user.getUsername() + ";user.getPassword():" + user.getPassword());
-        if (userService.login(user.getUsername(), user.getPassword())) {
-            request.getSession().setAttribute("user", user);
-            model.addAttribute("user", user);
-            return "redirect:/manager";
-        } else {
-            model.addAttribute("error", "用户名或密码错误");
-            return "admin/login";
-        }
-    }
-
-//    private String returnAdminIndex(Model model) {
-//        model.addAttribute("articles", articleService.getFirst10Article());
-//        return "redirect:/manager";
-//    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/manager/dologin")
-    public String doLogin(HttpServletRequest request, Model model) {
-        User user = (User) request.getSession().getAttribute("user");
-        if (user == null) {
-            userService.setCurrentUser(user);
-            return "admin/login";
-        }
-        return "redirect:/manager";
-    }
 
     @RequestMapping("/manager/write")
     public String write(Model model) {
