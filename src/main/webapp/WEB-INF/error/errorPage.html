@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>您访问的页面不存在</title>
+    <style type="text/css">
+        /*reset及 clear*/
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, table, th, td, embed, object, button {
+            margin:0;
+            padding:0;
+            font-size:12px;
+            color:#343434;
+            font-family:"宋体", Arial, Helvetica;
+            word-wrap:break-word;
+        }
+        fieldset, img, abbr {
+            border:0;
+        }
+        address, caption, cite, code, dfn, em, strong, th, var, i, b {
+            font-weight:normal;
+            font-style:normal;
+        }
+        ul, ol {
+            list-style:none;
+        }
+        a, a:link, a:visited, a:active {
+            text-decoration:none;
+        }
+        a:hover {
+            text-decoration:underline;
+        }
+        a:focus, input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+            outline:none;
+        }
+        .cl0, .cl5, .cl10, .cl15, .cl20 {
+            clear:both;
+            overflow:hidden;
+            font-size:0;
+        }
+        .cl0 {
+            height:0px;
+        }
+        .cl5 {
+            height:5px;
+        }
+        .cl10 {
+            height:10px;
+        }
+        .cl15 {
+            height:15px;
+        }
+        .cl20 {
+            height:20px;
+        }
+        .nav {
+            width:100%;
+            background:url(404/404navbg.jpg) repeat-x;
+            height:39px;
+        }
+        .wrap {
+            width:980px;
+            margin:0 auto;
+        }
+        .nav .wrap em {
+            color:#f5e2c2;
+            font: bold 16px/39px "宋体";
+            padding-left:40px;
+        }
+        .tl {
+            text-align:left;
+        }
+        .tc {
+            text-align:center;
+        }
+        .tr {
+            text-align:right;
+        }
+        .box {
+            border:1px solid #dedddd;
+            border-radius:3px;
+        }
+        /*颜色*/
+        .purity_red {
+            color:#f00;
+        }
+        .fred {
+            color:#b01f2e;
+        }
+        .fyellow {
+            color:#ead6b3;
+        }
+        /*字体大小*/
+        .fs12 {
+            font-size:12px;
+        }
+        .fs14 {
+            font-size:14px;
+        }
+        /*头部背景*/
+        html {
+            _background-attachment:fixed;
+            _background-image:url(nothing.txt);
+        }
+        body {
+            background:url(404/topbg.jpg) #fbfbfb repeat-x;
+            height:100%;
+        }
+        .yelangsembg {
+            background:url(404/headbackbg.jpg) no-repeat center top;
+            padding-top:0px;
+        }
+        /*正文*/
+        .w7 {
+            width:770px;
+            margin:0 auto;
+        }
+        .w7 span {
+            display:inline-block;
+            height:170px;
+            margin-left:60px;
+        }
+        .w7 h1 {
+            color:#a21e2c;
+            font-size:26px;
+            font-family:"微软雅黑";
+        }
+        .w7 h2 {
+            color:#666;
+            font: bold 16px "宋体";
+            margin:10px 0;
+        }
+        .w7 h3 {
+            color:#666;
+            font: bold 14px "宋体";
+            margin:10px 0;
+        }
+        .w7 h3 em {
+            font-size:22px;
+            color:#aa2230;
+            padding:0 5px;
+            font-weight:bold;
+        }
+        .w7 span p a {
+            font: bold 14px/32px "新宋体";
+            color:;
+            display:inline-block;
+            background:url(404/404bt.jpg) no-repeat;
+            text-align:center;
+            width:106px;
+            height:32px;
+            margin-left:20px;
+        }
+    </style>
+    <script type="text/javascript">
+        function returnHistory(){
+            window.history.go(-1);
+        }
+    </script>
+</head>
+
+<body>
+<!-- 头部背景 -->
+<div class="yelangsembg">
+    <!-- 头部导航 --><!-- 头部导航 结束 --><!--通栏广告1-->
+    <div class="nav">
+        <div class="wrap"><!--  <em>访问页面出错</em>--></div>
+    </div>
+    <!--通栏广告1 结束-->
+    <div class="wrap" style="margin-top:85px;">
+        <div class="w7"> <span><img src="../static/img/404.gif"></span> <span>
+      <h1 style="">抱歉，您请求的页面现在暂时无法打开</h1>
+      <h2>您可以：</h2>
+      <p><a href="http://wishes-blog.cn" >返回首页</a><a href="#" onclick="returnHistory()">返回上一级</a></p>
+      <h3>本页面将在<em id="timeout">4</em>秒钟后自动转到首页，请稍后...</h3>
+      </span> </div>
+    </div>
+    <script type="text/javascript">
+
+        (function(){
+            var timeout = 0;
+            var handler = function(i){
+                document.getElementById("timeout").innerHTML = (5 - i);
+
+                if(i < 5)
+                {
+                    var method = arguments.callee;
+                    setTimeout(function(){method(i + 1);}, 1000);
+                }
+                else
+                {
+                    document.location="http://wishes-blog.cn";
+                }
+            };
+
+            handler(0);
+        })();
+
+
+    </script>
+</div>
+</body>
+</html>
